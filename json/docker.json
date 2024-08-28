@@ -1,0 +1,494 @@
+{
+    "sections": [
+        {
+            "title": "Commandes de base",
+            "items": [
+                {
+                    "title": "Installation de Docker",
+                    "commands": [
+                        {
+                            "label": "Pour installer Docker sur Ubuntu :",
+                            "code": "sudo apt-get update && sudo apt-get install docker-ce"
+                        },
+                        {
+                            "label": "Vérifier l'installation de Docker :",
+                            "code": "docker --version"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des conteneurs",
+                    "commands": [
+                        {
+                            "label": "Lister les conteneurs actifs :",
+                            "code": "docker ps"
+                        },
+                        {
+                            "label": "Lister tous les conteneurs (actifs et inactifs) :",
+                            "code": "docker ps -a"
+                        },
+                        {
+                            "label": "Démarrer un conteneur :",
+                            "code": "docker start <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Arrêter un conteneur :",
+                            "code": "docker stop <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Redémarrer un conteneur :",
+                            "code": "docker restart <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Tuer un conteneur :",
+                            "code": "docker kill <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Créer un nouveau conteneur :",
+                            "code": "docker create <nom-de-l-image>"
+                        },
+                        {
+                            "label": "Attacher l'entrée/sortie standard à un conteneur en cours d'exécution :",
+                            "code": "docker attach <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Exécuter une commande dans un conteneur en cours d'exécution :",
+                            "code": "docker exec -it <nom-ou-id-du-conteneur> <commande>"
+                        },
+                        {
+                            "label": "Afficher les journaux d'un conteneur :",
+                            "code": "docker logs <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Renommer un conteneur :",
+                            "code": "docker rename <ancien-nom> <nouveau-nom>"
+                        },
+                        {
+                            "label": "Supprimer un conteneur :",
+                            "code": "docker rm <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Exporter le système de fichiers d'un conteneur :",
+                            "code": "docker export <nom-ou-id-du-conteneur> > <nom-du-fichier>.tar"
+                        },
+                        {
+                            "label": "Importer un système de fichiers à partir d'une archive tar :",
+                            "code": "docker import <nom-du-fichier>.tar"
+                        },
+                        {
+                            "label": "Afficher les statistiques des conteneurs :",
+                            "code": "docker stats"
+                        },
+                        {
+                            "label": "Attendre qu'un ou plusieurs conteneurs s'arrêtent :",
+                            "code": "docker wait <nom-ou-id-du-conteneur>"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des images",
+                    "commands": [
+                        {
+                            "label": "Lister toutes les images :",
+                            "code": "docker images"
+                        },
+                        {
+                            "label": "Télécharger une image depuis Docker Hub :",
+                            "code": "docker pull <nom-de-l-image>"
+                        },
+                        {
+                            "label": "Pousser une image vers un registre :",
+                            "code": "docker push <nom-de-l-image>"
+                        },
+                        {
+                            "label": "Supprimer une image :",
+                            "code": "docker rmi <nom-de-l-image>"
+                        },
+                        {
+                            "label": "Construire une image à partir d'un Dockerfile :",
+                            "code": "docker build -t <nom-de-l-image> <chemin-du-Dockerfile>"
+                        },
+                        {
+                            "label": "Afficher l'historique d'une image :",
+                            "code": "docker history <nom-de-l-image>"
+                        },
+                        {
+                            "label": "Gérer les images :",
+                            "code": "docker image"
+                        },
+                        {
+                            "label": "Charger une image à partir d'une archive tar :",
+                            "code": "docker load < <nom-du-fichier>.tar"
+                        },
+                        {
+                            "label": "Taguer une image :",
+                            "code": "docker tag <source-image> <target-image>"
+                        },
+                        {
+                            "label": "Afficher les informations sur une image :",
+                            "code": "docker inspect <nom-de-l-image>"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des volumes",
+                    "commands": [
+                        {
+                            "label": "Un volume dans Docker est un mécanisme de stockage persistant qui permet de conserver les données générées et utilisées par les conteneurs. Contrairement aux systèmes de fichiers de conteneur, qui sont éphémères et perdus lorsque le conteneur est supprimé, les volumes existent indépendamment de la durée de vie des conteneurs. Ils permettent un stockage persistant, le partage de données entre conteneurs et sont facilement gérables par Docker.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Gérer les volumes :",
+                            "code": "docker volume"
+                        },
+                        {
+                            "label": "Lister les volumes :",
+                            "code": "docker volume ls"
+                        },
+                        {
+                            "label": "Créer un volume :",
+                            "code": "docker volume create <nom-du-volume>"
+                        },
+                        {
+                            "label": "Supprimer un volume :",
+                            "code": "docker volume rm <nom-du-volume>"
+                        },
+                        {
+                            "label": "Copier des fichiers entre un conteneur et le système de fichiers local :",
+                            "code": "docker cp <nom-ou-id-du-conteneur>:<chemin-dans-le-conteneur> <chemin-local>"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des réseaux",
+                    "commands": [
+                        {
+                            "label": "Un réseau dans Docker permet aux conteneurs de communiquer entre eux. Docker crée un réseau virtuel qui permet aux conteneurs de se découvrir et d'échanger des données sans avoir besoin d'exposer les ports sur l'hôte. Il existe différents types de réseaux : Bridge (réseau par défaut), Host (partage le réseau de l'hôte) et Overlay (pour la communication entre conteneurs sur différents hôtes dans un cluster Swarm).",
+                            "code": ""
+                        },
+                        {
+                            "label": "Gérer les réseaux :",
+                            "code": "docker network"
+                        },
+                        {
+                            "label": "Lister les réseaux :",
+                            "code": "docker network ls"
+                        },
+                        {
+                            "label": "Créer un réseau :",
+                            "code": "docker network create <nom-du-réseau>"
+                        },
+                        {
+                            "label": "Supprimer un réseau :",
+                            "code": "docker network rm <nom-du-réseau>"
+                        },
+                        {
+                            "label": "Afficher les informations sur un réseau :",
+                            "code": "docker network inspect <nom-du-réseau>"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des services et des stacks",
+                    "commands": [
+                        {
+                            "label": "Gérer les services :",
+                            "code": "docker service"
+                        },
+                        {
+                            "label": "Une stack est un ensemble de services qui forment une application. Dans Docker, une stack est déployée sur un Swarm, ce qui permet de gérer plusieurs conteneurs comme une seule unité. Les stacks facilitent le déploiement et la gestion d'applications complexes qui nécessitent plusieurs services interconnectés. Elles sont souvent définies dans un fichier docker-compose.yml et permettent une scalabilité facile en ajoutant ou supprimant des réplicas.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Pour gérer les stacks :",
+                            "code": "docker stack"
+                        },
+                        {
+                            "label": "Les secrets dans Docker sont des informations sensibles telles que des mots de passe, des clés API ou des certificats. Docker permet de gérer ces secrets de manière sécurisée en les stockant dans le Swarm et en les rendant accessibles uniquement aux services qui en ont besoin. Les secrets sont chiffrés au repos et en transit, et leur accès est contrôlé.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Pour gérer les secrets :",
+                            "code": "docker secret"
+                        },
+                        {
+                            "label": "Gérer les plugins :",
+                            "code": "docker plugin"
+                        },
+                        {
+                            "label": "Gérer les nœuds Swarm :",
+                            "code": "docker node"
+                        }
+                    ]
+                },
+                {
+                    "title": "Authentification et configuration",
+                    "commands": [
+                        {
+                            "label": "Se connecter à un registre Docker :",
+                            "code": "docker login"
+                        },
+                        {
+                            "label": "Se déconnecter d'un registre Docker :",
+                            "code": "docker logout"
+                        },
+                        {
+                            "label": "Afficher les informations système :",
+                            "code": "docker info"
+                        },
+                        {
+                            "label": "Afficher les événements en temps réel :",
+                            "code": "docker events"
+                        },
+                        {
+                            "label": "Afficher la version de Docker :",
+                            "code": "docker version"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Initiation à Docker",
+            "items": [
+                {
+                    "title": "Objectifs",
+                    "commands": [
+                        {
+                            "label": "Installer Docker sur votre système.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Exécuter des conteneurs de base.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Créer et utiliser des volumes pour stocker des données.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Découvrir les commandes de gestion de Docker.",
+                            "code": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Installation de Docker",
+                    "commands": [
+                        {
+                            "label": "Suivez les instructions d'installation pour votre système d'exploitation sur le site officiel de Docker.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Vérifiez que Docker est correctement installé en exécutant :",
+                            "code": "docker --version"
+                        }
+                    ]
+                },
+                {
+                    "title": "Exécution de conteneurs",
+                    "commands": [
+                        {
+                            "label": "Exécutez un conteneur de test en utilisant l'image hello-world :",
+                            "code": "docker run hello-world"
+                        },
+                        {
+                            "label": "Observez le message de bienvenue affiché par le conteneur.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Exécutez un conteneur Ubuntu avec un terminal interactif :",
+                            "code": "docker run -it ubuntu bash"
+                        },
+                        {
+                            "label": "Explorez l'intérieur du conteneur Ubuntu en exécutant des commandes Linux de base.",
+                            "code": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Utilisation des volumes",
+                    "commands": [
+                        {
+                            "label": "Créez un répertoire local pour stocker les données du volume :",
+                            "code": "mkdir ~/Documents/monVolume"
+                        },
+                        {
+                            "label": "Exécutez un conteneur Ubuntu en montant le volume local :",
+                            "code": "docker run -it -v ~/Documents/monVolume:/root/monVolume ubuntu bash"
+                        },
+                        {
+                            "label": "Dans le conteneur, créez un fichier dans le répertoire monté :",
+                            "code": "echo 'Données du conteneur' > /root/monVolume/fichier.txt"
+                        },
+                        {
+                            "label": "Vérifiez que le fichier est présent dans le répertoire local :",
+                            "code": "cat ~/Documents/monVolume/fichier.txt"
+                        },
+                        {
+                            "label": "Modifiez le fichier depuis l'hôte et vérifiez les changements dans le conteneur.",
+                            "code": "echo 'Modification depuis l\\'hôte' >> ~/Documents/monVolume/fichier.txt"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des conteneurs et des images",
+                    "commands": [
+                        {
+                            "label": "Listez les conteneurs en cours d'exécution :",
+                            "code": "docker container ls"
+                        },
+                        {
+                            "label": "Listez tous les conteneurs, y compris ceux arrêtés :",
+                            "code": "docker container ls -a"
+                        },
+                        {
+                            "label": "Listez les images Docker disponibles localement :",
+                            "code": "docker image ls"
+                        },
+                        {
+                            "label": "Inspectez les détails d'un conteneur :",
+                            "code": "docker inspect <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Arrêtez un conteneur en cours d'exécution :",
+                            "code": "docker stop <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Redémarrez un conteneur arrêté :",
+                            "code": "docker start <nom-ou-id-du-conteneur>"
+                        },
+                        {
+                            "label": "Supprimez un conteneur :",
+                            "code": "docker rm <nom-ou-id-du-conteneur>"
+                        }
+                    ]
+                },
+                {
+                    "title": "Conclusion",
+                    "commands": [
+                        {
+                            "label": "Cette activité vous a permis de découvrir les bases de Docker et d'effectuer des opérations pratiques avec des conteneurs et des volumes.",
+                            "code": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "DockerFile",
+            "items": [
+                {
+                    "title": "Introduction à Dockerfile",
+                    "commands": [
+                        {
+                            "label": "Un Dockerfile est un fichier texte contenant les instructions nécessaires pour assembler une image Docker.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Nous allons utiliser la commande docker build pour créer une image à partir d'un Dockerfile.",
+                            "code": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Création d'un Dockerfile",
+                    "commands": [
+                        {
+                            "label": "Créez un nouveau répertoire pour votre projet :",
+                            "code": "mkdir monProjetDocker"
+                        },
+                        {
+                            "label": "Accédez au répertoire créé :",
+                            "code": "cd monProjetDocker"
+                        },
+                        {
+                            "label": "Créez un fichier nommé Dockerfile :",
+                            "code": "touch Dockerfile"
+                        },
+                        {
+                            "label": "Ouvrez le Dockerfile avec un éditeur de texte et ajoutez les instructions suivantes :",
+                            "code": ""
+                        },
+                        {
+                            "label": "Exemple de contenu pour le Dockerfile :",
+                            "code": "FROM nginx:alpine\nCOPY index.html /usr/share/nginx/html/"
+                        },
+                        {
+                            "label": "Créez un fichier index.html dans le même répertoire :",
+                            "code": "echo '<h1>Bienvenue sur mon serveur Nginx!</h1>' > index.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Construction de l'image",
+                    "commands": [
+                        {
+                            "label": "Pour construire l'image à partir du Dockerfile, utilisez la commande suivante :",
+                            "code": "docker build -t mon-nginx-image ."
+                        },
+                        {
+                            "label": "Le paramètre -t permet de taguer l'image avec un nom (ici, mon-nginx-image).",
+                            "code": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Exécution du conteneur",
+                    "commands": [
+                        {
+                            "label": "Après avoir construit l'image, exécutez un conteneur basé sur cette image :",
+                            "code": "docker run -d --name mon-nginx-container -p 8080:80 mon-nginx-image"
+                        },
+                        {
+                            "label": "Cette commande exécute le conteneur en mode détaché (-d), le nomme mon-nginx-container, et mappe le port 8080 de l'hôte au port 80 du conteneur.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Pour vérifier que le conteneur fonctionne, ouvrez votre navigateur et allez à :",
+                            "code": "http://localhost:8080"
+                        }
+                    ]
+                },
+                {
+                    "title": "Gestion des images et des conteneurs",
+                    "commands": [
+                        {
+                            "label": "Pour lister toutes les images Docker disponibles, utilisez :",
+                            "code": "docker image ls"
+                        },
+                        {
+                            "label": "Pour lister tous les conteneurs en cours d'exécution, utilisez :",
+                            "code": "docker container ls"
+                        },
+                        {
+                            "label": "Pour arrêter le conteneur, utilisez :",
+                            "code": "docker stop mon-nginx-container"
+                        },
+                        {
+                            "label": "Pour supprimer le conteneur, utilisez :",
+                            "code": "docker rm mon-nginx-container"
+                        },
+                        {
+                            "label": "Pour supprimer l'image, utilisez :",
+                            "code": "docker rmi mon-nginx-image"
+                        }
+                    ]
+                },
+                {
+                    "title": "Conclusion",
+                    "commands": [
+                        {
+                            "label": "Vous avez appris à créer un Dockerfile, à construire une image Docker et à exécuter un conteneur basé sur cette image.",
+                            "code": ""
+                        },
+                        {
+                            "label": "Ces compétences sont essentielles pour développer et déployer des applications dans des environnements conteneurisés.",
+                            "code": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
