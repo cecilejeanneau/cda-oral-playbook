@@ -167,7 +167,7 @@ async function initializeContent(techno) {
     contentContainer.appendChild(homeButton);
     contentContainer.appendChild(colorBtn);
 
-    await fetch("https://pharallaxe.github.io/doc_public/json/_data.json")
+    await fetch("../json/_data.json")
         .then((response) => response.json())
         .then((data) => {
             const selectedData = data[techno];
@@ -183,7 +183,7 @@ async function initializeContent(techno) {
     initializeAccess()
     const accordion = new Accordion(
         "accordion-container",
-        `https://pharallaxe.github.io/doc_public/json/${techno}.min.json`
+        `../json/${techno}.min.json`
     );
     accordion.init();
 }
