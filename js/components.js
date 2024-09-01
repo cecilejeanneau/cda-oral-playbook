@@ -241,4 +241,4 @@ function initializeAccess() {
             colorPickerBar.style.display = "none";
         }
     });
-}}
+}
