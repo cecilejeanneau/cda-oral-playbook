@@ -31,7 +31,6 @@ class Accordion {
     renderSections() {
         if (!this.data || !this.data.sections) return;
         this.data.sections.forEach((section, sectionIndex) => {
-            console.log(this.container)
             this.container.appendChild(this.createSection(section, sectionIndex));
         });
         this.addCopyHandlers();
@@ -172,7 +171,6 @@ async function initializeContent(techno) {
         .then((response) => response.json())
         .then((data) => {
             const selectedData = data[techno];
-            console.log(selectedData)
             contentContainer.appendChild(createContent(selectedData));
             contentContainer.appendChild(createContentAccordion());
             document.querySelector("body").appendChild(contentContainer);
@@ -192,7 +190,6 @@ async function initializeContent(techno) {
 
 function initializeAccess() {
     const container = document.querySelector(".color-changer-container");
-    console.log(container);
     const colorChangerBtn = document.createElement("button");
     colorChangerBtn.className = "button-common color-changer-btn";
     colorChangerBtn.title = "Changer la couleur";
