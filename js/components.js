@@ -168,6 +168,7 @@ async function initializeContent(techno) {
     contentContainer.appendChild(colorBtn);
 
     await fetch("../json/_data.json")
+    await fetch("../json/data.json")
         .then((response) => response.json())
         .then((data) => {
             const selectedData = data[techno];
@@ -240,4 +241,4 @@ function initializeAccess() {
             colorPickerBar.style.display = "none";
         }
     });
-}
+}}
