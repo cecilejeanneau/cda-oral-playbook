@@ -1,62 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentations</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/doc_public/css/style.min.css">
-</head>
-<body class="bg-light">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
 
-<div class="container my-5">
-    <div class="text-center mb-4">
+  <body class="bg-light">
+    <div class="container my-5" id="documentation-container">
+      <div class="text-center mb-4">
         <h1>Documentation</h1>
-        <p class="lead">Accédez aux documentations de Symfony et Git en cliquant sur les cartes ci-dessous.</p>
+      </div>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-        <!-- Card Symfony -->
-        <div class="col">
-            <div class="card h-100 shadow-sm p-1">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Symfony</h5>
-                    <p class="card-text">Symfony est un framework PHP pour les applications web. Il est reconnu pour sa flexibilité et ses performances.</p>
-                    <a href="/doc_public/html/symfony.html" class="btn btn-primary mt-auto">Voir plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- Card Git -->
-        <div class="col">
-            <div class="card h-100 shadow-sm p-1">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Git</h5>
-                    <p class="card-text">Git est un système de gestion de versions décentralisé, utilisé pour suivre les modifications dans les fichiers de code source.</p>
-                    <a href="/doc_public/html/git.html" class="btn btn-primary">Voir plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- Card Less -->
-        <div class="col">
-            <div class="card h-100 shadow-sm p-1">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">LESS</h5>
-                    <p class="card-text">Less est un framework permettant d'écrire du CSS dynamiquent et plus rapidement. Il permet aussi d'augmenter sa maintenabilité.</p>
-                    <a href="/doc_public/html/less.html" class="btn btn-primary">Voir plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- Card Docker -->
-        <div class="col">
-            <div class="card h-100 shadow-sm p-1">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Docker</h5>
-                    <p class="card-text"></p>
-                    <a href="/doc_public/html/docker.html" class="btn btn-primary">Voir plus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const documentationData = [
+        {
+          title: "CSS",
+          description:
+            "CSS est un langage de style qui permet de contrôler l'apparence et la mise en page des documents HTML.",
+          link: "./html/css.html",
+        },
+        {
+          title: "Docker",
+          description:
+            "Docker est une plateforme qui permet de créer, déployer et exécuter des applications dans des conteneurs légers.",
+          link: "./html/docker.html",
+        },
+        {
+          title: "Git",
+          description:
+            "Git est un système de gestion de versions décentralisé, permettant de suivre les modifications apportées au code source.",
+          link: "./html/git.html",
+        },
+        {
+          title: "HTML",
+          description:
+            "HTML est le langage standard pour créer des pages web, permettant de structurer le contenu.",
+          link: "./html/html.html",
+        },
+        {
+          title: "LESS",
+          description:
+            "LESS est un préprocesseur CSS qui permet d'écrire des styles de manière plus dynamique et maintenable.",
+          link: "./html/less.html",
+        },
+        {
+          title: "Symfony",
+          description:
+            "Symfony est un framework PHP robuste qui facilite le développement d'applications web grâce à sa structure flexible.",
+          link: "./html/symfony.html",
+        },
+      ];
+
+      function createDocumentationCards(data) {
+        const container = document.getElementById("documentation-container");
+
+        const rowDiv = document.createElement("div");
+        rowDiv.className =
+          "row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4";
+
+        data.forEach((item) => {
+          const card = `
+                        <div class="col">
+                            <div class="card h-100 shadow-sm p-1">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">${item.title}</h5>
+                                    <p class="card-text">${item.description}</p>
+                                    <a href="${item.link}" class="btn btn-primary mt-auto">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+          rowDiv.innerHTML += card;
+        });
+
+        container.appendChild(rowDiv);
+      }
+
+      createDocumentationCards(documentationData);
+    </script>
+  </body>
 </html>
