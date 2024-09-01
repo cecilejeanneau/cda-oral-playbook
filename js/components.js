@@ -167,7 +167,7 @@ async function initializeContent(techno) {
     contentContainer.appendChild(homeButton);
     contentContainer.appendChild(colorBtn);
 
-    await fetch("../json/_data.json")
+    await fetch("https://pharallaxe.github.io/doc_public/json//json/_data.json")
         .then((response) => response.json())
         .then((data) => {
             const selectedData = data[techno];
