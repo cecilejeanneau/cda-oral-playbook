@@ -147,12 +147,6 @@ function createContent(data) {
     return contentDiv;
 }
 
-function createColorButton() {
-    const colorDiv = document.createElement("div");
-    colorDiv.className = "color-changer-container";
-    return colorDiv;
-}
-
 function createContentAccordion() {
     const contentAccordion = document.createElement("div");
     contentAccordion.id = "accordion-container";
@@ -165,10 +159,7 @@ async function initializeContent(techno) {
     contentContainer.className = "container my-5";
 
     const homeButton = createHomeButton();
-    const colorBtn = createColorButton();
-
     contentContainer.appendChild(homeButton);
-    contentContainer.appendChild(colorBtn);
 
     await fetch("../json/_data.json")
     await fetch("../json/data.json")
@@ -184,64 +175,9 @@ async function initializeContent(techno) {
             console.error("Erreur lors du chargement des données:", error)
         );
 
-    initializeAccess()
     const accordion = new Accordion(
         "accordion-container",
         `../json/${techno}.min.json`
     );
     accordion.init();
-}
-
-function initializeAccess() {
-    const container = document.querySelector(".color-changer-container");
-    const colorChangerBtn = document.createElement("button");
-    colorChangerBtn.className = "button-common color-changer-btn";
-    colorChangerBtn.title = "Changer la couleur";
-    colorChangerBtn.innerHTML = "🎨";
-    const colorPickerBar = document.createElement("div");
-    colorPickerBar.className = "color-picker-bar";
-    const colors = [
-        { className: "bg-primary", colorName: "bg-primary" },
-        { className: "bg-danger", colorName: "bg-danger" },
-        { className: "bg-warning", colorName: "bg-warning" },
-        { className: "bg-info", colorName: "bg-info" },
-        { className: "bg-dark", colorName: "bg-dark" },
-        { className: "bg-success", colorName: "bg-success" },
-    ];
-    colors.forEach((color) => {
-        const colorBtn = document.createElement("button");
-        colorBtn.className = `color-btn ${color.className}`;
-        colorBtn.setAttribute("data-color", color.colorName);
-        colorPickerBar.appendChild(colorBtn);
-    });
-    container.appendChild(colorChangerBtn);
-    container.appendChild(colorPickerBar);
-    colorChangerBtn.addEventListener("click", () => {
-        if (
-            colorPickerBar.style.display === "none" ||
-            colorPickerBar.style.display === ""
-        ) {
-            colorPickerBar.style.display = "block";
-        } else {
-            colorPickerBar.style.display = "none";
-        }
-    });
-    colorPickerBar.addEventListener("click", (event) => {
-        if (event.target.classList.contains("color-btn")) {
-            const newColorClass = event.target.getAttribute("data-color");
-            const elements = document.querySelectorAll(".background");
-            elements.forEach((element) => {
-                element.classList.forEach((className) => {
-                    if (
-                        className.startsWith("bg-") &&
-                        !className.startsWith("bg-opacity")
-                    ) {
-                        element.classList.remove(className);
-                    }
-                });
-                element.classList.add(newColorClass);
-            });
-            colorPickerBar.style.display = "none";
-        }
-    });
 }
