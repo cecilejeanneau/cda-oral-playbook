@@ -132,11 +132,14 @@ function createHomeButton() {
 
 // Fonction pour créer le contenu en fonction du framework
 function createContent(data) {
+    let img = "";
+    if (data.image !== "") img = `<img src="${data.image}" class="card-img-top" alt="${data.title}">`
+
     const contentDiv = document.createElement("div");
     contentDiv.className = "card-body d-flex flex-column mt-5 mb-5";
     contentDiv.innerHTML = `
         <h1 class="text-center mb-4">Documentation ${data.title}</h1>
-        <img src="${data.image}" class="card-img-top" alt="${data.title}">
+        ${img}
         <p>${data.description}</p>
         <p>${data.details}</p>
         <p>${data.usage}</p>
