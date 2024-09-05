@@ -20,6 +20,13 @@
         "details": "Créé en <strong>2009</strong> par <strong>Alexis Sellier</strong>, LESS ajoute des fonctionnalités telles que les variables, les mixins, les fonctions et les opérations, facilitant ainsi le développement CSS.",
         "usage": "LESS se distingue par sa capacité à rendre le CSS plus modulaire et réutilisable. Grâce à l'utilisation de variables, les développeurs peuvent stocker les couleurs, les tailles et les polices, ce qui simplifie la gestion des styles à travers un projet. Les mixins permettent également d'inclure des groupes de propriétés CSS dans d'autres sélecteurs, réduisant ainsi la redondance et améliorant la lisibilité du code."
     },
+    "mysql": {
+        "title": "SQL",
+        "image": "../img/mysql.png",
+        "description": "<strong>SQL</strong> (Structured Query Language) est un langage standard utilisé pour la gestion et la manipulation des bases de données relationnelles.",
+        "details": "Il a été développé dans les années <strong>1970</strong> par <strong>IBM</strong> et est maintenant utilisé par de nombreux systèmes de gestion de bases de données, tels que MySQL, PostgreSQL, Oracle, et Microsoft SQL Server.",
+        "usage": "SQL permet aux utilisateurs de créer, lire, mettre à jour et supprimer des données dans une base de données. Il fournit des commandes puissantes pour interroger et manipuler les données, ce qui en fait un outil essentiel pour les développeurs et les analystes de données."
+    },
     "regex": {
         "title": "Regex",
         "image": "",
