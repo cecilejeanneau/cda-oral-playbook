@@ -33,5 +33,12 @@
         "description": "Les <strong>expressions régulières</strong> (ou <strong>Regex</strong>) sont des séquences de caractères qui définissent un motif de recherche. Elles ont été initialement développées par <strong>Stephen Cole Kleene</strong> dans les années <strong>1950</strong> comme une façon de décrire les langages réguliers.",
         "details": "Les Regex sont utilisées pour la recherche de motifs dans du texte, la validation de formats, et la manipulation de chaînes de caractères. Elles sont implémentées dans de nombreux langages de programmation et outils de traitement de texte, offrant une méthode puissante et flexible pour travailler avec du texte.",
         "usage": "Les expressions régulières sont largement utilisées dans le développement web, le traitement de données, la validation de formulaires, et l'analyse de logs. Elles sont particulièrement utiles pour extraire des informations spécifiques de grandes quantités de texte ou pour vérifier si une chaîne correspond à un format particulier."
-    }
+    },
+    "php": {
+        "title": "PHP",
+        "image": "../img/php.png",
+        "description": "<strong>PHP</strong> (Hypertext Preprocessor) est un langage de script open-source, principalement utilisé pour le développement web.",
+        "details": "Créé en <strong>1995</strong> par <strong>Rasmus Lerdorf</strong>, PHP est conçu pour permettre aux développeurs de créer des pages web dynamiques et interactives.",
+        "usage": "PHP est un langage côté serveur, ce qui signifie qu'il s'exécute sur le serveur et génère du HTML qui est ensuite envoyé au navigateur de l'utilisateur. Cela permet de créer des applications web robustes qui peuvent interagir avec des bases de données, gérer des sessions utilisateur, et bien plus encore."
+    },
 }

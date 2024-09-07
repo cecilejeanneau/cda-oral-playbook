@@ -1,0 +1,913 @@
+{
+    "sections": [
+        {
+            "title": "Introduction à PHP",
+            "items": [
+                {
+                    "title": "Qu'est-ce que PHP ?",
+                    "commands": [
+                        {
+                            "label": "PHP est un langage de script côté serveur conçu pour le développement web, mais aussi utilisé comme langage de programmation généraliste.",
+                            "code": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Syntaxe de base",
+                    "commands": [
+                        {
+                            "label": "Tags PHP : Le code PHP est encapsulé entre des balises spéciales",
+                            "code": "<?php\n    // Code PHP ici\n?>"
+                        },
+                        {
+                            "label": "Commentaire sur une ligne : Utilisez // pour les commentaires sur une seule ligne",
+                            "code": "// Ceci est un commentaire sur une ligne"
+                        },
+                        {
+                            "label": "Commentaire sur plusieurs lignes : Utilisez /* */ pour les commentaires sur plusieurs lignes",
+                            "code": "/*\n    Ceci est un commentaire\n    sur plusieurs lignes\n*/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Variables et constantes",
+            "items": [
+                {
+                    "title": "Déclaration de variables",
+                    "commands": [
+                        {
+                            "label": "Les variables en PHP commencent par le signe $",
+                            "code": "$nom = 'John';\n$age = 30;\n$prix = 19.99;"
+                        }
+                    ]
+                },
+                {
+                    "title": "Types de données",
+                    "commands": [
+                        {
+                            "label": "Integer (int) : Nombre entier",
+                            "code": "$nombre = 42;"
+                        },
+                        {
+                            "label": "Float : Nombre à virgule flottante",
+                            "code": "$pi = 3.14159;"
+                        },
+                        {
+                            "label": "String : Chaîne de caractères",
+                            "code": "$texte = 'Hello, world!';"
+                        },
+                        {
+                            "label": "Boolean (bool) : Valeur logique true ou false",
+                            "code": "$estVrai = true;"
+                        },
+                        {
+                            "label": "Array : Tableau",
+                            "code": "$fruits = ['pomme', 'banane', 'orange'];"
+                        },
+                        {
+                            "label": "Object : Instance d'une classe",
+                            "code": "$obj = new MaClasse();"
+                        },
+                        {
+                            "label": "Null : Absence de valeur",
+                            "code": "$vide = null;"
+                        }
+                    ]
+                },
+                {
+                    "title": "Définition avec define()",
+                    "commands": [
+                        {
+                            "label": "Définir une constante avec define()",
+                            "code": "define('PI', 3.14159);\necho PI; // Affiche 3.14159"
+                        }
+                    ]
+                },
+                {
+                    "title": "Constantes magiques",
+                    "commands": [
+                        {
+                            "label": "__LINE__ : Numéro de la ligne courante dans le fichier",
+                            "code": "echo __LINE__;"
+                        },
+                        {
+                            "label": "__FILE__ : Chemin complet et nom du fichier",
+                            "code": "echo __FILE__;"
+                        },
+                        {
+                            "label": "__DIR__ : Répertoire du fichier",
+                            "code": "echo __DIR__;"
+                        },
+                        {
+                            "label": "__FUNCTION__ : Nom de la fonction courante",
+                            "code": "echo __FUNCTION__;"
+                        },
+                        {
+                            "label": "__CLASS__ : Nom de la classe courante",
+                            "code": "echo __CLASS__;"
+                        },
+                        {
+                            "label": "__METHOD__ : Nom de la méthode courante",
+                            "code": "echo __METHOD__;"
+                        },
+                        {
+                            "label": "__NAMESPACE__ : Nom de l'espace de noms courant",
+                            "code": "echo __NAMESPACE__;"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Opérateurs",
+            "items": [
+                {
+                    "title": "Opérateurs arithmétiques",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez effectuer une addition en utilisant l'opérateur (+).",
+                            "code": "$a = 5 + 3;\n// $a vaut 8"
+                        },
+                        {
+                            "label": "Vous pouvez effectuer une soustraction en utilisant l'opérateur (-).",
+                            "code": "$b = 10 - 4;\n// $b vaut 6"
+                        },
+                        {
+                            "label": "Vous pouvez effectuer une multiplication en utilisant l'opérateur (*).",
+                            "code": "$c = 3 * 4;\n// $c vaut 12"
+                        },
+                        {
+                            "label": "Vous pouvez effectuer une division en utilisant l'opérateur (/).",
+                            "code": "$d = 15 / 3;\n// $d vaut 5"
+                        },
+                        {
+                            "label": "Vous pouvez obtenir le reste d'une division en utilisant l'opérateur modulo (%).",
+                            "code": "$e = 17 % 5;\n// $e vaut 2"
+                        }
+                    ]
+                },
+                {
+                    "title": "Opérateurs de comparaison",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez vérifier si deux valeurs sont égales en utilisant l'opérateur (==).",
+                            "code": "if ($a == $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si deux valeurs sont identiques en utilisant l'opérateur (===).",
+                            "code": "if ($a === $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si deux valeurs ne sont pas égales en utilisant l'opérateur (!=).",
+                            "code": "if ($a != $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si deux valeurs ne sont pas identiques en utilisant l'opérateur (!==).",
+                            "code": "if ($a !== $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si une valeur est inférieure à une autre en utilisant l'opérateur (<).",
+                            "code": "if ($a < $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si une valeur est supérieure à une autre en utilisant l'opérateur (>).",
+                            "code": "if ($a > $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si une valeur est inférieure ou égale à une autre en utilisant l'opérateur (<=).",
+                            "code": "if ($a <= $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si une valeur est supérieure ou égale à une autre en utilisant l'opérateur (>=).",
+                            "code": "if ($a >= $b) { /* ... */ }"
+                        }
+                    ]
+                },
+                {
+                    "title": "Opérateurs logiques",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez vérifier si deux conditions sont vraies en utilisant l'opérateur ET logique (&&).",
+                            "code": "if ($a && $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez vérifier si au moins une condition est vraie en utilisant l'opérateur OU logique (||).",
+                            "code": "if ($a || $b) { /* ... */ }"
+                        },
+                        {
+                            "label": "Vous pouvez inverser la valeur d'une condition en utilisant l'opérateur NON logique (!).",
+                            "code": "if (!$a) { /* ... */ }"
+                        }
+                    ]
+                },
+                {
+                    "title": "Opérateurs d'affectation",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez assigner une valeur à une variable en utilisant l'opérateur d'affectation simple (=).",
+                            "code": "$a = 5;"
+                        },
+                        {
+                            "label": "Vous pouvez ajouter une valeur à une variable et l'assigner en utilisant l'opérateur d'addition et d'affectation (+=).",
+                            "code": "$a += 3;\n// Équivalent à $a = $a + 3"
+                        },
+                        {
+                            "label": "Vous pouvez soustraire une valeur d'une variable et l'assigner en utilisant l'opérateur de soustraction et d'affectation (-=).",
+                            "code": "$a -= 2;\n// Équivalent à $a = $a - 2"
+                        },
+                        {
+                            "label": "Vous pouvez multiplier une variable par une valeur et l'assigner en utilisant l'opérateur de multiplication et d'affectation (*=).",
+                            "code": "$a *= 4;\n// Équivalent à $a = $a * 4"
+                        },
+                        {
+                            "label": "Vous pouvez diviser une variable par une valeur et l'assigner en utilisant l'opérateur de division et d'affectation (/=).",
+                            "code": "$a /= 2;\n// Équivalent à $a = $a / 2"
+                        }
+                    ]
+                },
+                {
+                    "title": "Opérateurs de chaîne",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez combiner deux chaînes de caractères en utilisant l'opérateur de concaténation (.).",
+                            "code": "$nom = 'John' . ' ' . 'Doe';\n// $nom vaut 'John Doe'"
+                        },
+                        {
+                            "label": "Vous pouvez ajouter une chaîne à une variable existante en utilisant l'opérateur de concaténation et d'affectation (.=).",
+                            "code": "$texte = 'Hello';\n$texte .= ' World';\n// $texte vaut 'Hello World'"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Structures de Contrôle",
+            "items": [
+                {
+                    "title": "Conditions",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez utiliser la structure if pour exécuter du code si une condition est vraie.",
+                            "code": "if ($condition) {\n    // code à exécuter si la condition est vraie\n}"
+                        },
+                        {
+                            "label": "Vous pouvez ajouter une clause else pour exécuter du code alternatif si la condition est fausse.",
+                            "code": "if ($condition) {\n    // code si vrai\n} else {\n    // code si faux\n}"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser elseif pour tester plusieurs conditions successives.",
+                            "code": "if ($condition1) {\n    // code si condition1 est vraie\n} elseif ($condition2) {\n    // code si condition2 est vraie\n} else {\n    // code si aucune condition n'est vraie\n}"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser switch pour comparer une variable à plusieurs valeurs possibles.",
+                            "code": "switch ($variable) {\n    case 'valeur1':\n        // code pour valeur1\n        break;\n    case 'valeur2':\n        // code pour valeur2\n        break;\n    default:\n        // code par défaut\n}"
+                        }
+                    ]
+                },
+                {
+                    "title": "Boucles",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez utiliser la boucle for pour exécuter un bloc de code un nombre défini de fois.",
+                            "code": "for ($i = 0; $i < 10; $i++) {\n    // code à répéter\n}"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser la boucle while pour exécuter un bloc de code tant qu'une condition est vraie.",
+                            "code": "while ($condition) {\n    // code à répéter\n}"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser la boucle do...while pour exécuter un bloc de code au moins une fois, puis tant qu'une condition est vraie.",
+                            "code": "do {\n    // code à répéter\n} while ($condition);"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser la boucle foreach pour itérer sur les éléments d'un tableau ou d'un objet.",
+                            "code": "foreach ($array as $value) {\n    // code pour chaque élément\n}"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser foreach avec la clé et la valeur pour les tableaux associatifs.",
+                            "code": "foreach ($array as $key => $value) {\n    // code utilisant $key et $value\n}"
+                        }
+                    ]
+                },
+                {
+                    "title": "Contrôle de boucle",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez utiliser break pour sortir immédiatement d'une boucle.",
+                            "code": "while (true) {\n    if ($condition) {\n        break;\n    }\n}"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser continue pour passer directement à l'itération suivante d'une boucle.",
+                            "code": "for ($i = 0; $i < 10; $i++) {\n    if ($i % 2 == 0) {\n        continue;\n    }\n    // code pour les nombres impairs\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Fonctions - Les bases",
+            "items": [
+                {
+                    "title": "Déclaration et appel",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez déclarer une fonction en utilisant le mot-clé function suivi du nom de la fonction.",
+                            "code": "function direBonjour() {\n    echo 'Bonjour !';\n}"
+                        },
+                        {
+                            "label": "Vous pouvez appeler une fonction en utilisant son nom suivi de parenthèses.",
+                            "code": "direBonjour();\n// Affiche 'Bonjour !'"
+                        }
+                    ]
+                },
+                {
+                    "title": "Paramètres et arguments",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez définir des paramètres pour une fonction afin de passer des valeurs.",
+                            "code": "function saluer($nom) {\n    echo 'Bonjour, ' . $nom . '!';\n}"
+                        },
+                        {
+                            "label": "Vous pouvez appeler une fonction avec des arguments pour fournir des valeurs aux paramètres.",
+                            "code": "saluer('Alice');\n// Affiche 'Bonjour, Alice !'"
+                        },
+                        {
+                            "label": "Vous pouvez définir des valeurs par défaut pour les paramètres.",
+                            "code": "function saluer($nom = 'invité') {\n    echo 'Bonjour, ' . $nom . '!';\n}\nsaluer(); // Affiche 'Bonjour, invité !'"
+                        }
+                    ]
+                },
+                {
+                    "title": "Valeur de retour",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez retourner une valeur depuis une fonction en utilisant le mot-clé return.",
+                            "code": "function additionner($a, $b) {\n    return $a + $b;\n}\n$resultat = additionner(5, 3);\n// $resultat vaut 8"
+                        }
+                    ]
+                },
+                {
+                    "title": "Fonctions anonymes et fermetures (closures)",
+                    "commands": [
+                        {
+                            "label": "Vous pouvez créer une fonction anonyme en l'assignant à une variable.",
+                            "code": "$direBonjour = function($nom) {\n    echo 'Bonjour, ' . $nom . '!';\n};\n$direBonjour('Bob');\n// Affiche 'Bonjour, Bob !'"
+                        },
+                        {
+                            "label": "Vous pouvez utiliser use pour importer des variables dans une fermeture.",
+                            "code": "$message = 'Salut';\n$direMessage = function($nom) use ($message) {\n    echo $message . ', ' . $nom . '!';\n};\n$direMessage('Charlie');\n// Affiche 'Salut, Charlie !'"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Fonctions - Array",
+            "items": [
+                {
+                    "title": "array()",
+                    "commands": [
+                        {
+                            "label": "Crée un tableau",
+                            "code": "$fruits = array('pomme', 'banane', 'orange');"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_push()",
+                    "commands": [
+                        {
+                            "label": "Ajoute un ou plusieurs éléments à la fin d'un tableau",
+                            "code": "array_push($fruits, 'kiwi', 'mangue');\n// $fruits devient ['pomme', 'banane', 'orange', 'kiwi', 'mangue']"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_pop()",
+                    "commands": [
+                        {
+                            "label": "Extrait et supprime le dernier élément d'un tableau",
+                            "code": "$dernier = array_pop($fruits);\n// $dernier vaut 'mangue', $fruits perd son dernier élément"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_shift()",
+                    "commands": [
+                        {
+                            "label": "Extrait et supprime le premier élément d'un tableau",
+                            "code": "$premier = array_shift($fruits);\n// $premier vaut 'pomme', $fruits perd son premier élément"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_unshift()",
+                    "commands": [
+                        {
+                            "label": "Ajoute un ou plusieurs éléments au début d'un tableau",
+                            "code": "array_unshift($fruits, 'fraise', 'cerise');\n// $fruits commence maintenant par 'fraise', 'cerise'"
+                        }
+                    ]
+                },
+                {
+                    "title": "count()",
+                    "commands": [
+                        {
+                            "label": "Compte le nombre d'éléments dans un tableau",
+                            "code": "$nombre = count($fruits);\n// $nombre contient le nombre d'éléments dans $fruits"
+                        }
+                    ]
+                },
+                {
+                    "title": "sort()",
+                    "commands": [
+                        {
+                            "label": "Trie un tableau",
+                            "code": "sort($fruits);\n// $fruits est maintenant trié par ordre alphabétique"
+                        }
+                    ]
+                },
+                {
+                    "title": "rsort()",
+                    "commands": [
+                        {
+                            "label": "Trie un tableau en ordre décroissant",
+                            "code": "rsort($fruits);\n// $fruits est maintenant trié par ordre alphabétique inverse"
+                        }
+                    ]
+                },
+                {
+                    "title": "asort()",
+                    "commands": [
+                        {
+                            "label": "Trie un tableau associatif en fonction des valeurs",
+                            "code": "asort($ages);\n// $ages est trié par valeurs croissantes, en conservant les associations clé-valeur"
+                        }
+                    ]
+                },
+                {
+                    "title": "ksort()",
+                    "commands": [
+                        {
+                            "label": "Trie un tableau associatif en fonction des clés",
+                            "code": "ksort($ages);\n// $ages est trié par clés croissantes"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_reverse()",
+                    "commands": [
+                        {
+                            "label": "Inverse l'ordre des éléments d'un tableau",
+                            "code": "$inverse = array_reverse($fruits);\n// $inverse contient $fruits dans l'ordre inverse"
+                        }
+                    ]
+                },
+                {
+                    "title": "in_array()",
+                    "commands": [
+                        {
+                            "label": "Vérifie si une valeur existe dans un tableau",
+                            "code": "if (in_array('banane', $fruits))\n\t{ /* La banane est dans le tableau */ }"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_search()",
+                    "commands": [
+                        {
+                            "label": "Recherche une valeur dans un tableau et retourne sa clé",
+                            "code": "$position = array_search('orange', $fruits);\n// $position contient la clé de 'orange' ou false"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_key_exists()",
+                    "commands": [
+                        {
+                            "label": "Vérifie si une clé existe dans un tableau",
+                            "code": "if (array_key_exists('pomme', $fruits))\n\t{ /* La clé 'pomme' existe */ }"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_merge()",
+                    "commands": [
+                        {
+                            "label": "Fusionne deux ou plusieurs tableaux",
+                            "code": "$fusion = array_merge($fruits, $legumes);\n// $fusion contient tous les éléments de $fruits et $legumes"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_combine()",
+                    "commands": [
+                        {
+                            "label": "Crée un tableau en utilisant un tableau pour les clés et un autre pour les valeurs",
+                            "code": "$combine = array_combine($cles, $valeurs);\n// $combine est un tableau associatif avec $cles comme clés et $valeurs comme valeurs"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_slice()",
+                    "commands": [
+                        {
+                            "label": "Extrait une portion d'un tableau",
+                            "code": "$portion = array_slice($fruits, 2, 3);\n// $portion contient 3 éléments à partir de l'index 2 de $fruits"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_splice()",
+                    "commands": [
+                        {
+                            "label": "Supprime et remplace une portion d'un tableau",
+                            "code": "array_splice($fruits, 1, 2, ['poire', 'raisin']);\n// Remplace 2 éléments à partir de l'index 1 par 'poire' et 'raisin'"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_unique()",
+                    "commands": [
+                        {
+                            "label": "Supprime les doublons d'un tableau",
+                            "code": "$unique = array_unique($fruits);\n// $unique contient $fruits sans les doublons"
+                        }
+                    ]
+                },
+                {
+                    "title": "array_filter()",
+                    "commands": [
+                        {
+                            "label": "Filtre les éléments d'un tableau en utilisant une fonction de rappel",
+                            "code": "$filtres = array_filter($nombres, fn($n) => $n > 5);\n// $filtres contient les nombres supérieurs à 5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Fonctions - String",
+            "items": [
+                {
+                    "title": "strlen()",
+                    "commands": [
+                        {
+                            "label": "Retourne la longueur d'une chaîne.",
+                            "code": "$longueur = strlen('Hello');\n// $longueur vaut 5"
+                        }
+                    ]
+                },
+                {
+                    "title": "strtoupper()",
+                    "commands": [
+                        {
+                            "label": "Convertit une chaîne en majuscules.",
+                            "code": "$maj = strtoupper('hello');\n// $maj vaut 'HELLO'"
+                        }
+                    ]
+                },
+                {
+                    "title": "strtolower()",
+                    "commands": [
+                        {
+                            "label": "Convertit une chaîne en minuscules.",
+                            "code": "$min = strtolower('HELLO');\n// $min vaut 'hello'"
+                        }
+                    ]
+                },
+                {
+                    "title": "ucfirst()",
+                    "commands": [
+                        {
+                            "label": "Met en majuscule la première lettre d'une chaîne.",
+                            "code": "$ucf = ucfirst('hello world');\n// $ucf vaut 'Hello world'"
+                        }
+                    ]
+                },
+                {
+                    "title": "ucwords()",
+                    "commands": [
+                        {
+                            "label": "Met en majuscule la première lettre de chaque mot dans une chaîne.",
+                            "code": "$ucw = ucwords('hello world');\n// $ucw vaut 'Hello World'"
+                        }
+                    ]
+                },
+                {
+                    "title": "trim()",
+                    "commands": [
+                        {
+                            "label": "Supprime les espaces (ou d'autres caractères) en début et fin de chaîne.",
+                            "code": "$trimmed = trim('  Hello  ');\n// $trimmed vaut 'Hello'"
+                        }
+                    ]
+                },
+                {
+                    "title": "ltrim()",
+                    "commands": [
+                        {
+                            "label": "Supprime les espaces (ou d'autres caractères) au début d'une chaîne.",
+                            "code": "$ltrimmed = ltrim('  Hello  ');\n// $ltrimmed vaut 'Hello  '"
+                        }
+                    ]
+                },
+                {
+                    "title": "rtrim()",
+                    "commands": [
+                        {
+                            "label": "Supprime les espaces (ou d'autres caractères) à la fin d'une chaîne.",
+                            "code": "$rtrimmed = rtrim('  Hello  ');\n// $rtrimmed vaut '  Hello'"
+                        }
+                    ]
+                },
+                {
+                    "title": "substr()",
+                    "commands": [
+                        {
+                            "label": "Retourne une sous-chaîne d'une chaîne.",
+                            "code": "$sub = substr('Hello World', 6, 5);\n// $sub vaut 'World'"
+                        }
+                    ]
+                },
+                {
+                    "title": "strpos()",
+                    "commands": [
+                        {
+                            "label": "Trouve la position de la première occurrence d'une sous-chaîne dans une chaîne.",
+                            "code": "$pos = strpos('Hello World', 'World');\n// $pos vaut 6"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_replace()",
+                    "commands": [
+                        {
+                            "label": "Remplace toutes les occurrences d'une sous-chaîne par une autre dans une chaîne.",
+                            "code": "$new = str_replace('World', 'PHP', 'Hello World');\n// $new vaut 'Hello PHP'"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_ireplace()",
+                    "commands": [
+                        {
+                            "label": "Remplace toutes les occurrences d'une sous-chaîne par une autre dans une chaîne, sans tenir compte de la casse.",
+                            "code": "$new = str_ireplace('world', 'PHP', 'Hello World');\n// $new vaut 'Hello PHP'"
+                        }
+                    ]
+                },
+                {
+                    "title": "explode()",
+                    "commands": [
+                        {
+                            "label": "Divise une chaîne en un tableau en utilisant un délimiteur.",
+                            "code": "$arr = explode(' ', 'Hello World');\n// $arr vaut ['Hello', 'World']"
+                        }
+                    ]
+                },
+                {
+                    "title": "implode()",
+                    "commands": [
+                        {
+                            "label": "Combine les éléments d'un tableau en une chaîne, en utilisant un délimiteur.",
+                            "code": "$str = implode(', ', ['Hello', 'World']);\n// $str vaut 'Hello, World'"
+                        }
+                    ]
+                },
+                {
+                    "title": "sprintf()",
+                    "commands": [
+                        {
+                            "label": "Formate une chaîne en fonction d'un format spécifié.",
+                            "code": "$formatted = sprintf('Hello, %s!', 'World');\n// $formatted vaut 'Hello, World!'"
+                        }
+                    ]
+                },
+                {
+                    "title": "htmlspecialchars()",
+                    "commands": [
+                        {
+                            "label": "Convertit des caractères spéciaux en entités HTML.",
+                            "code": "$safe = htmlspecialchars('<a href=\"test\">Test</a>');\n// $safe vaut '&lt;a href=&quot;test&quot;&gt;Test&lt;/a&gt;'"
+                        }
+                    ]
+                },
+                {
+                    "title": "htmlentities()",
+                    "commands": [
+                        {
+                            "label": "Convertit tous les caractères applicables en entités HTML.",
+                            "code": "$entities = htmlentities('<©>');\n// $entities vaut '&lt;&copy;&gt;'"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_split()",
+                    "commands": [
+                        {
+                            "label": "Divise une chaîne en un tableau en fonction d'une longueur spécifiée.",
+                            "code": "$arr = str_split('Hello', 2);\n// $arr vaut ['He', 'll', 'o']"
+                        }
+                    ]
+                },
+                {
+                    "title": "strrev()",
+                    "commands": [
+                        {
+                            "label": "Inverse une chaîne.",
+                            "code": "$rev = strrev('Hello');\n// $rev vaut 'olleH'"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_repeat()",
+                    "commands": [
+                        {
+                            "label": "Répète une chaîne un nombre spécifié de fois.",
+                            "code": "$repeat = str_repeat('Hi', 3);\n// $repeat vaut 'HiHiHi'"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_contains()",
+                    "commands": [
+                        {
+                            "label": "Vérifie si une chaîne contient une sous-chaîne (disponible à partir de PHP 8.0).",
+                            "code": "$contains = str_contains('Hello World', 'World');\n// $contains vaut true"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_starts_with()",
+                    "commands": [
+                        {
+                            "label": "Vérifie si une chaîne commence par une sous-chaîne (disponible à partir de PHP 8.0).",
+                            "code": "$starts = str_starts_with('Hello World', 'Hello');\n// $starts vaut true"
+                        }
+                    ]
+                },
+                {
+                    "title": "str_ends_with()",
+                    "commands": [
+                        {
+                            "label": "Vérifie si une chaîne se termine par une sous-chaîne (disponible à partir de PHP 8.0).",
+                            "code": "$ends = str_ends_with('Hello World', 'World');\n// $ends vaut true"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Fonctions - Date et Heure",
+            "items": [
+                {
+                    "title": "new DateTime()",
+                    "commands": [
+                        {
+                            "label": "Déclaration d'une date spécifique.",
+                            "code": "$date = new DateTime('2024-09-04 15:30:00');"
+                        }
+                    ]
+                },
+                {
+                    "title": "date()",
+                    "commands": [
+                        {
+                            "label": "Formate une date/heure locale.",
+                            "code": "$date = date('Y-m-d H:i:s');\n// Par exemple: '2024-09-04 15:30:00'"
+                        }
+                    ]
+                },
+                {
+                    "title": "time()",
+                    "commands": [
+                        {
+                            "label": "Retourne l'heure actuelle en secondes depuis l'époque Unix (1er janvier 1970 00:00:00 GMT).",
+                            "code": "$timestamp = time();\n// Par exemple: 1693839000"
+                        }
+                    ]
+                },
+                {
+                    "title": "strtotime()",
+                    "commands": [
+                        {
+                            "label": "Convertit une chaîne de date lisible par l'homme en un timestamp Unix.",
+                            "code": "$timestamp = strtotime('next Monday');\n// Timestamp du prochain lundi"
+                        }
+                    ]
+                },
+                {
+                    "title": "mktime()",
+                    "commands": [
+                        {
+                            "label": "Retourne le timestamp Unix pour une date donnée.",
+                            "code": "$timestamp = mktime(15, 30, 0, 9, 4, 2024);\n// 15:30:00 le 4 septembre 2024"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_create()",
+                    "commands": [
+                        {
+                            "label": "Crée un nouvel objet DateTime.",
+                            "code": "$date = date_create('2024-09-04 15:30:00');"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_format()",
+                    "commands": [
+                        {
+                            "label": "Retourne une date formatée selon un format spécifié.",
+                            "code": "$formatted = date_format($date, 'Y-m-d H:i:s');"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_add()",
+                    "commands": [
+                        {
+                            "label": "Ajoute un intervalle à un objet DateTime.",
+                            "code": "$date = new DateTime('2024-09-04 15:30:00');\ndate_add($date, date_interval_create_from_date_string('1 day'));\necho $date->format('Y-m-d H:i:s');\n // Affiche 2024-09-05 15:30:00"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_sub()",
+                    "commands": [
+                        {
+                            "label": "Soustrait un intervalle d'un objet DateTime.",
+                            "code": "$date = new DateTime('2024-09-04 15:30:00');\ndate_sub($date, date_interval_create_from_date_string('1 day'));\necho $date->format('Y-m-d H:i:s');\n // Affiche 2024-09-03 15:30:00"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_diff()",
+                    "commands": [
+                        {
+                            "label": "Calcule la différence entre deux objets DateTime.",
+                            "code": "$date1 = new DateTime('2024-09-04 15:30:00');\n$date2 = new DateTime('2023-09-02 21:30:00');\n\n$diff = date_diff($date1, $date2);\n\necho $diff->format('%y années, %m mois, %d jours, %h heures, %i minutes, %s secondes');\n// Affiche 1 années, 0 mois, 1 jours, 18 heures, 0 minutes, 0 secondes;"
+                        }
+                    ]
+                },
+                {
+                    "title": "getdate()",
+                    "commands": [
+                        {
+                            "label": "Retourne une date/heure locale.",
+                            "code": "$info = getdate();\n// Retourne un tableau avec les informations de date"
+                        }
+                    ]
+                },
+                {
+                    "title": "checkdate()",
+                    "commands": [
+                        {
+                            "label": "Valide une date grégorienne.",
+                            "code": "$valide = checkdate(2, 29, 2024);\n// Vérifie si le 29 février 2024 est une date valide"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_default_timezone_set()",
+                    "commands": [
+                        {
+                            "label": "Définit le fuseau horaire par défaut à utiliser.",
+                            "code": "date_default_timezone_set('Europe/Paris');"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_default_timezone_get()",
+                    "commands": [
+                        {
+                            "label": "Retourne le fuseau horaire par défaut.",
+                            "code": "$timezone = date_default_timezone_get();"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_sunrise()",
+                    "commands": [
+                        {
+                            "label": "Retourne l'heure du lever du soleil pour un jour et un lieu donnés.",
+                            "code": "$sunrise = date_sunrise(time(), SUNFUNCS_RET_STRING, 48.8566, 2.3522);"
+                        }
+                    ]
+                },
+                {
+                    "title": "date_sunset()",
+                    "commands": [
+                        {
+                            "label": "Retourne l'heure du coucher du soleil pour un jour et un lieu donnés.",
+                            "code": "$sunset = date_sunset(time(), SUNFUNCS_RET_STRING, 48.8566, 2.3522);"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
