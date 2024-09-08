@@ -40,5 +40,5 @@
         "description": "<strong>PHP</strong> (Hypertext Preprocessor) est un langage de script open-source, principalement utilisé pour le développement web.",
         "details": "Créé en <strong>1995</strong> par <strong>Rasmus Lerdorf</strong>, PHP est conçu pour permettre aux développeurs de créer des pages web dynamiques et interactives.",
         "usage": "PHP est un langage côté serveur, ce qui signifie qu'il s'exécute sur le serveur et génère du HTML qui est ensuite envoyé au navigateur de l'utilisateur. Cela permet de créer des applications web robustes qui peuvent interagir avec des bases de données, gérer des sessions utilisateur, et bien plus encore."
-    },
+    }
 }
