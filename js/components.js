@@ -161,7 +161,6 @@ async function initializeContent(techno) {
     const homeButton = createHomeButton();
     contentContainer.appendChild(homeButton);
 
-    await fetch("../json/_data.json")
     await fetch("../json/data.json")
         .then((response) => response.json())
         .then((data) => {
