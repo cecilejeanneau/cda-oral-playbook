@@ -49,5 +49,12 @@
         "description": "<strong>Questions fréquentes</strong> sur des technologies ou des concepts en informatiques, tels que l'IDE, Git et d'autres outils de développement. Cette section vise à clarifier des notions clés et à aider les développeurs à mieux comprendre les pratiques et les outils qu'ils utilisent au quotidien.",
         "details": "",
         "usage": ""
+    },
+    "symfony": {
+        "title": "Symfony (v. 6.4)",
+        "image": "../img/symfony.png",
+        "description": "<strong>Symfony</strong> est un framework open-source pour le développement d'applications web, écrit en PHP.",
+        "details": "Créé en <strong>2005</strong> par <strong>Fabien Potencier</strong> et développé par <strong>SensioLabs</strong>, il est conçu pour simplifier et accélérer le développement d'applications web robustes et flexibles.",
+        "usage": "Utilisé par des milliers de développeurs et de grandes entreprises à travers le monde, Symfony est reconnu pour ses performances élevées."
     }
 }
