@@ -1,0 +1,5 @@
+async function loadDocumentation(){let documentationData=null;try{const response=await fetch("json/data.json");if(!response.ok){throw new Error('Erreur lors de la lecture du fichier JSON: '+response.statusText);}
+documentationData=await response.json();createDocumentationCards(documentationData);}catch(error){console.error(error);}}
+function createDocumentationCards(data){const container=document.getElementById("documentation-container");const rowDiv=document.createElement("div");rowDiv.className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4";for(const key in data){if(data.hasOwnProperty(key)){const item=data[key];const card=`<div class="col"><div class="card h-100 shadow-sm p-1"><div class="card-body d-flex flex-column"><h5 class="card-title">${item.title}</h5><p class="card-text">${item.presentation}</p><a href="./html/${item.link}.html"class="btn btn-success mt-auto">Voir plus</a></div></div></div>`;rowDiv.innerHTML+=card;}}
+container.appendChild(rowDiv);}
+loadDocumentation();
