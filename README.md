@@ -3,6 +3,9 @@
 Ce repository est un **fork** du projet original suivant :  
 https://github.com/pharallaxe/doc_public
 
+<img width="1285" height="993" alt="image" src="https://github.com/user-attachments/assets/5fadd826-b2c5-4212-ac1f-4ec50a711b75" />
+> Capture d’écran du site original GitHub Pages : https://pharallaxe.github.io/doc_public/index.html
+
 Ce fork a pour objectif personnel d’ajouter des précisions, compléments, reformulations, notes et enrichissements sur les contenus déjà présents, afin d’en faciliter l’étude, la mémorisation et l’appropriation dans le cadre de révisions personnelles.
 
 Aucun changement structurel majeur n’est prévu à ce stade.  
